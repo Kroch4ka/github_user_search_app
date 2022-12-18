@@ -11,12 +11,23 @@
   margin-bottom: 2.5em;
 }
 
+.theme_toggler {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  cursor: pointer;
+}
+
 .search {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--light-theme-main-interface);
   padding: 0.5em 0.6em 0.5em 2em;
+}
+
+body.dark .search {
+  background-color: var(--dark-theme-main-interface);
 }
 
 .search_group {
@@ -42,6 +53,10 @@
   "icon content";
 }
 
+body.dark .user {
+  background-color: var(--dark-theme-main-interface);
+}
+
 .user .icon {
   grid-area: icon;
   margin-right: 2em;
@@ -60,6 +75,10 @@
   padding: 1em 2em;
   margin-top: 2em;
   background-color: var(--light-theme-background);
+}
+
+body.dark .statistics {
+  background-color: var(--dark-theme-background);
 }
 
 .statistics .inner {

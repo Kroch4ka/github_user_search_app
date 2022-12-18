@@ -1,13 +1,15 @@
 /* Dark theme variables */
 :root {
-  --dark-theme-text-color: #FFFFFF;
+  --dark-theme-text-regular: #FFFFFF;
+  --dark-theme-text-major: #FFFFFF;
   --dark-theme-background: #141D2F;
   --dark-theme-main-interface: #1E2A47;
 }
 
 /* Light theme variables */
 :root {
-  --light-theme-text-color: #697C9A;
+  --light-theme-text-regular: #697C9A;
+  --light-theme-text-major: #2B3442;
   --light-theme-background: #F6F8FF;
   --light-theme-main-interface: #FEFEFE;
 }

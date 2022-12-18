@@ -13,12 +13,36 @@ body {
   align-items: center;
   min-height: 100vh;
   background-color: var(--light-theme-background);
+  color: var(--light-theme-text-regular);
+}
+
+body.dark {
+  background-color: var(--dark-theme-background);
+  color: var(--dark-theme-text-regular);
+}
+
+.title {
+  color: var(--light-theme-text-major);
+}
+
+body.dark .title {
+  color: var(--dark-theme-text-major);
 }
 
 input,
 button {
   border: none;
   outline: none;
+  background-color: transparent;
+}
+
+input,
+::placeholder {
+  color: var(--light-theme-text-regular);
+}
+
+body.dark ::placeholder {
+  color: var(--dark-theme-text-regular);
 }
 
 img {
