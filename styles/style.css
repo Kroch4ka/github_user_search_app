@@ -48,3 +48,15 @@ body.dark ::placeholder {
 img {
   max-width: 100%;
 }
+
+.hide {
+  display: none;
+}
+
+.alert {
+  color: var(--alert-color);
+}
+
+.not_available {
+  opacity: 75%;
+}

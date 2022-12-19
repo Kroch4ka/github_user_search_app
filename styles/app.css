@@ -11,6 +11,10 @@
   margin-bottom: 2.5em;
 }
 
+.app .search {
+  border-radius: 15px;
+}
+
 .theme_toggler {
   display: flex;
   align-items: center;
@@ -43,6 +47,13 @@ body.dark .search {
   border-radius: 8px;
 }
 
+.search_interaction{ 
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+
+
 .user {
   display: grid;
   margin-top: 2em;
@@ -51,15 +62,20 @@ body.dark .search {
   grid-template-areas:
   "icon content"
   "icon content";
+  border-radius: 15px;
 }
 
 body.dark .user {
   background-color: var(--dark-theme-main-interface);
 }
 
-.user .icon {
+.user .user_icon {
   grid-area: icon;
-  margin-right: 2em;
+  max-width: 117px;
+}
+
+.user .user_icon img {
+  border-radius: 50%;
 }
 
 .user .content {
@@ -69,6 +85,10 @@ body.dark .user {
 .user .short_info {
   display: flex;
   justify-content: space-between;
+}
+
+.user .login {
+  color: var(--accent-color)
 }
 
 .statistics {
@@ -90,4 +110,9 @@ body.dark .statistics {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 2.5em;
+}
+
+.links .link {
+  display: flex;
+  gap: 1em;
 }
