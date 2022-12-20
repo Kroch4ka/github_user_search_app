@@ -1,7 +1,7 @@
 const LIGHT = Symbol('light')
 const DARK = Symbol('dark')
 
-let currentTheme = DARK
+let currentTheme = LIGHT
 
 const switchTheme = () => {
   switch(currentTheme) {
