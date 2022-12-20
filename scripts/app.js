@@ -1,17 +1,13 @@
-import theme from './theme/theme.js'
-import search from './search.js'
-import user from './user.js'
-import github from './github.js'
+import theme from "./theme/theme.js";
+import search from "./search.js";
 
-const preloadUserLogin = 'octocat'
+const preloadUserLogin = "octocat";
 
 const initialize = () => {
-  theme.bindSwitchThemeHandlers()
-  search.bindSearchHandlers()
-  theme.renderCurrentTheme()
-  github.getUserInfoByLogin(preloadUserLogin)
-    .then(user.renderUserInfo)
-    .catch(console.log)
-}
+  theme.bindSwitchThemeHandlers();
+  search.bindSearchHandlers();
+  theme.renderCurrentTheme();
+  search.startSearchProcess(preloadUserLogin)
+};
 
-initialize()
+initialize();

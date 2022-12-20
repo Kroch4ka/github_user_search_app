@@ -1,6 +1,7 @@
 .app {
   max-width: var(--desktop-card-width);
   width: 100%;
+  user-select: none;
 }
 
 .app header {
@@ -27,12 +28,37 @@
   font-weight: bold;
 }
 
+[data-theme-dark] path {
+  fill: var(--light-theme-text-regular); 
+}
+
+[data-theme-light] {
+  fill: var(--dark-theme-text-regular);
+}
+
+.theme_toggler:hover {
+  color: var(--light-theme-toggler-hover-color);
+}
+
+.theme_toggler:hover [data-theme-dark] path {
+  fill: var(--light-theme-toggler-hover-color);
+}
+
+.dark .theme_toggler:hover {
+  color: var(--dark-theme-toggler-hover-color);
+}
+
+.dark .theme_toggler:hover [data-theme-light] {
+  fill: var(--dark-theme-toggler-hover-color);
+}
+
 .search {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: var(--light-theme-main-interface);
   padding: 0.5em 0.6em 0.5em 2em;
+  cursor: pointer;
 }
 
 body.dark .search {
@@ -40,11 +66,7 @@ body.dark .search {
 }
 
 .search_input {
-  flex-basis: 50%;
-}
-
-.search {
-  cursor: pointer;
+  flex-basis: 65%;
 }
 
 .search_btn {
@@ -70,18 +92,18 @@ body.dark .search {
 
 .user {
   display: grid;
-  margin-top: 2em;
-  padding: 3em;
-  background-color: var(--light-theme-main-interface);
   grid-template-areas:
-    "icon short-info"
-    ". bio"
-    ". statistics"
-    ". links";
-  border-radius: var(--interface-border-radius);
+  "icon short-info"
+  ". bio"
+  ". statistics"
+  ". links";
   grid-template-columns: 10em 1fr;
   grid-template-rows: 4em;
   grid-row-gap: 2em;
+  margin-top: 2em;
+  padding: 3em;
+  border-radius: var(--interface-border-radius);
+  background-color: var(--light-theme-main-interface);
 }
 
 .user .user_icon {
@@ -143,6 +165,11 @@ body.dark .statistics {
 
 .not_available {
   opacity: 75%;
+}
+
+.preloader {
+  max-width: 65px;
+  max-height: 65px;
 }
 
 @media screen and (max-width: 768px) {

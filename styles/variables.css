@@ -4,6 +4,7 @@
   --dark-theme-text-major: #FFFFFF;
   --dark-theme-background: #141D2F;
   --dark-theme-main-interface: #1E2A47;
+  --dark-theme-toggler-hover-color: #90A4D4;
 }
 
 /* Light theme variables */
@@ -12,6 +13,7 @@
   --light-theme-text-major: #2B3442;
   --light-theme-background: #F6F8FF;
   --light-theme-main-interface: #FEFEFE;
+  --light-theme-toggler-hover-color: #222731;
 }
 
 /* Common variables */
