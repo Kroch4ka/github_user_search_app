@@ -11,14 +11,14 @@
       href="./assets/favicon-32x32.png"
     />
     <link rel="stylesheet" href="styles/style.css" />
-    <script type="module" defer src="scripts/index.js"></script>
+    <script type="module" defer src="scripts/app.js"></script>
     <title>Frontend Mentor | GitHub user search app</title>
   </head>
   <body>
     <main>
       <div class="app">
         <header>
-          <h1 class="title">devfinder</h1>
+          <h1>devfinder</h1>
           <div class="theme_toggler">
             <div class="theme_title"></div>
             <div class="theme_icon">
@@ -29,75 +29,59 @@
         </header>
         <section>
           <div class="search">
-            <div class="search_group">
-              <span class="icon"
-                ><img src="./assets/icon-search.svg" alt="search icon"
-              /></span>
-              <input
-                type="text"
-                class="search_input"
-                placeholder="Search GitHub username…"
-              />
-            </div>
-            <div class="search_interaction">
-              <span class="alert search_alert"></span>
-              <button class="search_btn">Search</button>
-            </div>
+            <span class="icon"
+              ><img src="./assets/icon-search.svg" alt="search icon"
+            /></span>
+            <input
+              type="text"
+              class="search_input"
+              placeholder="Search GitHub username…"
+            />
+            <span class="alert search_alert"></span>
+            <button class="search_btn">Search</button>
           </div>
           <div class="user">
             <div class="user_icon" data-icon></div>
-            <div class="content">
-              <div class="info">
-                <div class="short_info">
-                  <div class="about">
-                    <h2 class="title name" data-name></h2>
-                    <span class="login" data-login></span>
-                  </div>
-                  <div class="joined_date" data-joined></div>
-                </div>
-                <div class="bio" data-bio></div>
+            <div class="short_info">
+              <div class="about">
+                <h2 class="title name" data-name></h2>
+                <span class="login" data-login></span>
               </div>
-              <div class="statistics">
-                <div class="inner">
-                  <div class="repositories">
-                    <div class="field_name">Repos</div>
-                    <span class="count" data-repos-count></span>
-                  </div>
-                  <div class="followers">
-                    <div class="field_name">Followers</div>
-                    <span class="count" data-followers-count></span>
-                  </div>
-                  <div class="following">
-                    <div class="field_name">Following</div>
-                    <span class="count" data-following-count></span>
-                  </div>
+              <div class="joined_date" data-joined></div>
+            </div>
+            <div class="bio" data-bio></div>
+            <div class="statistics">
+              <div class="inner">
+                <div class="repositories">
+                  <div class="field_name">Repos</div>
+                  <span class="title count" data-repos-count></span>
+                </div>
+                <div class="followers">
+                  <div class="field_name">Followers</div>
+                  <span class="title count" data-followers-count></span>
+                </div>
+                <div class="following">
+                  <div class="field_name">Following</div>
+                  <span class="title count" data-following-count></span>
                 </div>
               </div>
-              <div class="links">
-                <div class="link" data-link="location">
-                  <span class="icon"
-                    ><img src="assets/icon-location.svg"
-                  /></span>
-                  <div class="content"></div>
-                </div>
-                <div class="link" data-link="twitter">
-                  <span class="icon"
-                    ><img src="assets/icon-twitter.svg"
-                  /></span>
-                  <div class="content"></div>
-                </div>
-                <div class="link" data-link="website">
-                  <span class="icon"
-                    ><img src="assets/icon-website.svg"
-                  /></span>
-                  <div class="content"></div>
-                </div>
-                <div class="link" data-link="company">
-                  <span class="icon"
-                    ><img src="assets/icon-company.svg"
-                  /></span>
-                  <div class="content"></div>
-                </div>
+            </div>
+            <div class="links">
+              <div class="link" data-link="location">
+                <span class="icon"><img src="assets/icon-location.svg" /></span>
+                <div class="content"></div>
+              </div>
+              <div class="link" data-link="twitter">
+                <span class="icon"><img src="assets/icon-twitter.svg" /></span>
+                <div class="content"></div>
+              </div>
+              <div class="link" data-link="website">
+                <span class="icon"><img src="assets/icon-website.svg" /></span>
+                <div class="content"></div>
+              </div>
+              <div class="link" data-link="company">
+                <span class="icon"><img src="assets/icon-company.svg" /></span>
+                <div class="content"></div>
               </div>
             </div>
           </div>

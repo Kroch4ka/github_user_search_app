@@ -1,5 +1,6 @@
 @import url(variables.css);
 @import url(app.css);
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
 
 * {
   box-sizing: border-box;
@@ -14,6 +15,7 @@ body {
   min-height: 100vh;
   background-color: var(--light-theme-background);
   color: var(--light-theme-text-regular);
+  font-family: 'Space Mono', monospace;
 }
 
 body.dark {
@@ -21,11 +23,24 @@ body.dark {
   color: var(--dark-theme-text-regular);
 }
 
+h1,
+h2,
 .title {
+  font-weight: bold;
   color: var(--light-theme-text-major);
 }
 
-body.dark .title {
+h1 {
+  font-size: 1.85rem;
+}
+
+.title,
+h2 {
+  font-size: 1.5rem;
+}
+
+body.dark .title,
+body.dark h1 {
   color: var(--dark-theme-text-major);
 }
 
@@ -34,11 +49,13 @@ button {
   border: none;
   outline: none;
   background-color: transparent;
+  font-family: 'Space Mono', monospace;
 }
 
 input,
 ::placeholder {
   color: var(--light-theme-text-regular);
+  font-size: 1.25rem;
 }
 
 body.dark ::placeholder {
@@ -49,14 +66,48 @@ img {
   max-width: 100%;
 }
 
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 .hide {
   display: none;
 }
 
 .alert {
   color: var(--alert-color);
+  font-weight: bold;
 }
 
-.not_available {
-  opacity: 75%;
+@media screen and (max-width: 768px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  input,
+  ::placeholder {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  body {
+    font-size: 0.85rem;
+  }
+
+  input,
+  ::placeholder {
+    font-size: 0.8rem;
+  }
+  
+  .title,
+  h2 {
+    font-size: 1rem;
+  }
 }

@@ -19,4 +19,9 @@
 :root {
   --accent-color: #0079FF;
   --alert-color: #F74646;
+  --interface-border-radius: 15px;
+  --desktop-card-width: 730px;
+  --tablet-card-width: 573px;
+  --mobile-card-width: 327px;
+  --search-btn-hover: #60ABFF;
 }

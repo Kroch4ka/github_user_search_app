@@ -41,7 +41,7 @@ const renderCreatedAt = (userData) => {
 }
 
 const renderBio = (userData) => {
-  const bio = userData.bio || 'This profile has no bio'
+  const bio = userData.bio ?? 'This profile has no bio'
   document.querySelector('[data-bio]').textContent = bio
 }
 
